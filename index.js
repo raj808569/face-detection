@@ -42,14 +42,14 @@ var name=socket.id;console.log(name);
 
 //Will automatically append location output type
  socket.on('click',function(data){
-   var locat1='/home/sadist69/Desktop/face/public/'+name;
+   var locat1='/public/'+name;
    Webcam.capture( locat1,function(err,res){
      console.log('soka');
    } );
    console.log("working");
  });
  socket.on('result',function(data){
-   console.log("working2");var located='/home/sadist69/Desktop/face/public/'+name+'.jpg';console.log(located);
+   console.log("working2");var located='/public/'+name+'.jpg';console.log(located);
    client.face.detect({
     path: located,
     analyzesAge: true,
