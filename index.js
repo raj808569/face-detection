@@ -59,7 +59,7 @@ var name=socket.id;console.log(name);
  socket.on('result',function(data){
    console.log("working2");var located='C:/Users/User/Desktop/face-detection/face-detection-master/public/'+name+'.jpg';console.log(located);
    client.face.detect({
-    url: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSjTKxD56iMMj5KD5q4n0tRUBRyTqbOgIIz518L2jyKPxlsKQaFFg',
+    url: 'http://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSjTKxD56iMMj5KD5q4n0tRUBRyTqbOgIIz518L2jyKPxlsKQaFFg',
     analyzesAge: true,
     analyzesGender: true
 }).then(function (response) {
