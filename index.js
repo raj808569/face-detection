@@ -47,13 +47,7 @@ var name=socket.id;console.log(name);
 
 //Will automatically append location output type
  socket.on('click',function(data){
-   var locat1='C:/Users/User/Desktop/face-detection/face-detection-master/public/'+name;
-   Webcam.capture(function(err){
-     console.log('soka');
-	 cloudinary.uploader.upload("test_picture.jpeg", function(result) { 
-  console.log(result) 
-});
-   } );
+  
    console.log("working");
  });
  socket.on('result',function(data){
