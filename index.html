@@ -17,13 +17,13 @@
   </style>
 </head>
 <body>
-  <div class="header" style="background-color:black;height:100px;">
+  <div class="header" style="background-color:black;height:80px;">
     <center style="font-size:32px;color:white;padding-top:20px;">Face detection</center>
   </div>
-  <div id="resultbox" style="height:550px;">
+  <div id="resultbox" style="margin-bottom:25px;">
   </div>
 	<div class="container">
-    <button class="btn btn-primary btn-lg btn-block" id="button1">Capture Image</button>
+    <button class="btn btn-primary btn-lg btn-block" id="button1" style="margin-bottom:5px;">Capture Image</button>
     <button class="btn btn-secondary btn-lg btn-block" id="button2">Show Result</button>
   </div>
   <script>
@@ -46,7 +46,7 @@
   			});
         socket.on('answer',function(data){
           var age=data.age;var gender=data.gender;
-          $resultbox.html('<br><br><br><h1 style="text-align:center;color:white;font-size:32px;">Your age is about:'+age+' years</h1>'+'<br><br><br><h1 style="text-align:center;color:white;font-size:32px;">Your gender is:'+gender+'!!</h1>');
+          $resultbox.html('<br><h1 style="text-align:center;color:white;font-size:32px;">Your age is about:'+age+' years</h1>'+'<br><br><h1 style="text-align:center;color:white;font-size:32px;">Your gender is:'+gender+'!!</h1>'+'<br><h1 style="text-align:center;color:white;font-size:32px;">Refresh page to use again</h1>');
         });
     });
   });
