@@ -21,9 +21,21 @@
     <center style="font-size:32px;color:white;padding-top:20px;">Face detection</center>
   </div>
   <div id="resultbox" style="margin-bottom:25px;">
+	<script src="/javascript/webcam.js"></script>
+	<center><div id="my_camera" style="width:320px; height:240px;"></div></center>
+    <div id="my_result"></div>
+	<script language="JavaScript">
+        Webcam.attach( '#my_camera' );
+
+        function take_snapshot() {
+            Webcam.snap( function(data_uri) {
+                document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
+            } );
+        }
+    </script>
   </div>
 	<div class="container">
-    <button class="btn btn-primary btn-lg btn-block" id="button1" style="margin-bottom:5px;">Capture Image</button>
+    <button class="btn btn-primary btn-lg btn-block" id="button1" style="margin-bottom:5px;" onclick="javascript:void(take_snapshot())">Capture Image</button>
     <button class="btn btn-secondary btn-lg btn-block" id="button2">Show Result</button>
   </div>
   <script>
