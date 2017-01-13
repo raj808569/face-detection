@@ -22,14 +22,14 @@
   </div>
   <div id="resultbox" style="margin-bottom:25px;">
 	<script src="/javascript/webcam.js"></script>
-	<center><div id="my_camera" style="width:320px; height:240px;"></div><div id="my_result"></div></center>
+	<center><div id="my_camera" style="width:320px; height:240px;"></div></center>
     
 	<script language="JavaScript">
         Webcam.attach( '#my_camera' );
 
         function take_snapshot() {
             Webcam.snap( function(data_uri) {
-            	   document.getElementById('my_result').innerHTML = '<center><div style="width:320px;height:240px;"><img src="'+data_uri+'" /></div></center>';
+            	   
 				console.log(data_uri);
             } );
         }
