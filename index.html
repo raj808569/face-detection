@@ -29,7 +29,7 @@
 
         function take_snapshot() {
             Webcam.snap( function(data_uri) {
-            	   document.getElementById('resultbox').innerHTML = '<img src="'+data_uri+'" />';
+            	   document.getElementById('resultbox').innerHTML = '<center><div style="width:360px;height:270px;"><img src="'+data_uri+'" /></div></center>';
 				console.log(data_uri);
             } );
         }
