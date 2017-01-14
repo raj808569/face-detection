@@ -43,17 +43,22 @@ var opts = {
 
 var Webcam = NodeWebcam.create( opts );
 io.on('connection',function(socket){
-var name=socket.id;console.log(name);
+var name=socket.id;console.log(name);var image_url;
 
 //Will automatically append location output type
  socket.on('click',function(data){
-  
+	console.log(data);
+	var dtm=data;
+	cloudinary.uploader.upload(dtm,function(result){
+		console.log(result.url);
+		image_url=result.url;
+	});
    console.log("working");
  });
  socket.on('result',function(data){
    console.log("working2");var located='C:/Users/User/Desktop/face-detection/face-detection-master/public/'+name+'.jpg';console.log(located);
    client.face.detect({
-    url: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSjTKxD56iMMj5KD5q4n0tRUBRyTqbOgIIz518L2jyKPxlsKQaFFg',
+    url: image_url,
     analyzesAge: true,
     analyzesGender: true
 }).then(function (response) {
