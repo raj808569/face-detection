@@ -13,7 +13,7 @@ http.listen (app.get('port'),function() {
   console.log("listening to port number "+app.get('port'));
 });
 var oxford = require('project-oxford'),
-    client = new oxford.Client('631297ea8915437f80129990b2b491e8');
+    client = new oxford.Client('3940508a773140a9ad69e2b83ef159ec');
 
 var NodeWebcam = require( "node-webcam" );
 var cloudinary = require('cloudinary');
